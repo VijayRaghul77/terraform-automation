@@ -13,8 +13,8 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "Client_storage"
-    storage_account_name = "botdeployment"
+    resource_group_name  = "rg-prod-vnet-179"
+    storage_account_name = "tfstate179"
     container_name       = "tfstate"
     key                  = "production.terraform.tfstate"
   }

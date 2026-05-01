@@ -33,10 +33,10 @@ resource "azurerm_linux_web_app" "prpod" {
   https_only          = true
 
   site_config {
-    always_on         = false
-    ftps_state        = "FtpsOnly"
+    always_on           = false
+    ftps_state          = "FtpsOnly"
     minimum_tls_version = "1.2"
-    
+
     application_stack {
       python_version = "3.12"
     }

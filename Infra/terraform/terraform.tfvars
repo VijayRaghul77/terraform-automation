@@ -2,7 +2,7 @@
 # Core
 # ──────────────────────────────────────────────
 location            = "Canada Central"
-resource_group_name = "covasant-production-rg"
+resource_group_name = "clientname-production-rg"
 environment         = "production"
 
 tags = {
@@ -18,7 +18,7 @@ tags = {
 #   10.99.0.0/16, 10.41.0.0/16,
 #   Hub VNet 10.41.16.0/21, AVD VNet 10.41.88.0/21
 # ──────────────────────────────────────────────
-vnet_name          = "covasant-prod-vnet"
+vnet_name          = "clientname-prod-vnet"
 vnet_address_space = ["10.51.0.0/16"]
 
 subnets = {
@@ -60,7 +60,7 @@ use_hub_gateway = false
 # SQL
 # ──────────────────────────────────────────────
 # sql_admin_password must be supplied via pipeline variable group / TF_VAR_sql_admin_password env var
-sql_server_name = "covasant-prod-sql"
+sql_server_name = "clientname-prod-sql"
 sql_admin_login = "sqladmin"
 sql_databases   = ["Quebec-db", "gitea-db"]
 sql_sku_name    = "S0"
@@ -70,12 +70,12 @@ sql_sku_name    = "S0"
 # ──────────────────────────────────────────────
 storage_accounts = {
   data = {
-    name                     = "covasantdata"
+    name                     = "clientnamedata"
     account_tier             = "Standard"
     account_replication_type = "LRS"
   }
   jupiter = {
-    name                     = "covasantjupiter"
+    name                     = "clientnamejupiter"
     account_tier             = "Standard"
     account_replication_type = "LRS"
   }
@@ -170,8 +170,8 @@ storage_seed_blobs = {
 # ──────────────────────────────────────────────
 # AKS
 # ──────────────────────────────────────────────
-aks_cluster_name   = "covasantprodaks"
-aks_dns_prefix     = "covasantprod"
+aks_cluster_name   = "clientnameprodaks"
+aks_dns_prefix     = "clientnameprod"
 kubernetes_version = "1.34"
 
 aks_node_pools = {
@@ -219,24 +219,24 @@ aks_node_pools = {
 
 aks_service_cidr           = "10.52.0.0/16"
 aks_dns_service_ip         = "10.52.0.10"
-tenant_id                  = "955ca1aa-6ef6-4a8f-b03c-8a34e73b8c73"
-aks_admin_group_object_ids = ["4f29e847-8c46-4c1b-8146-cb84b5fec581"]
+tenant_id                  = "################################"
+aks_admin_group_object_ids = ["################################"]
 
 # ──────────────────────────────────────────────
 # Cognitive Services
 # ──────────────────────────────────────────────
-openai_account_name     = "covasant-prod-openai"
+openai_account_name     = "clientname-prod-openai"
 openai_location         = "East US"
 openai_sku_name         = "S0"
-openai_custom_subdomain = "covasant-prod-ai"
+openai_custom_subdomain = "clientname-prod-ai"
 
-ocr_account_name = "covasant-prod-ocr"
+ocr_account_name = "clientname-prod-ocr"
 ocr_sku_name     = "S1"
 
 # ──────────────────────────────────────────────
 # Key Vault
 # ──────────────────────────────────────────────
-key_vault_name = "covasant-prod-kv"
+key_vault_name = "clientname-prod-kv"
 
 # Object ID of the service principal or user that administers Key Vault
 # Must be set — typically the Azure DevOps SP or a dedicated admin AAD group object ID
