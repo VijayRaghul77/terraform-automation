@@ -4,7 +4,7 @@ This lab provides hands-on experience with advanced Terraform state management. 
 
 ## 🛠️ Prerequisites
 - Azure CLI authenticated (`az login`)
-- Subscription ID: `8e5d6fa3-c1fc-4acf-b5d2-c91162b8d939`
+- Subscription ID: `Subscription_ID`
 
 ## 📖 Scenarios & Workflow
 
@@ -16,7 +16,7 @@ Bring a manually created Azure resource under Terraform control.
   ```
 - **Terraform Import**:
   ```powershell
-  terraform import azurerm_resource_group.manual /subscriptions/8e5d6fa3-c1fc-4acf-b5d2-c91162b8d939/resourceGroups/rg-manual-resource
+  terraform import azurerm_resource_group.manual /subscriptions/################/resourceGroups/rg-manual-resource
   ```
 
 ### 2. Rename a Resource (State Move)
