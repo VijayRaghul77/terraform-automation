@@ -1,0 +1,3 @@
+PartitionKey,RowKey,Value
+Setting1,001,Enabled
+Setting2,002,Disabled
